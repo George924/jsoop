@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //fa o clasa masina cu proprietatile culoare, nrRoti,
+        //fa-i un constructor si o metoda(functie) cu numele "sumar()" care returneaza un string cu valorile proprietatilor lui(culoare si nrRoti)
+        
+        //instantia un obiect cu prorietatile "rosu" si 3;
+
+        //afiseaza rezultatul metodei sumar()
+
+        class Masina {
+            constructor (culoare, nrRoti)
+            {
+                this.culoare=culoare;
+                this.nrRoti=nrRoti;
+            };
+            sumar(){
+                return `${this.culoare}, ${this.nrRoti}`;
+            }
+        }
+
+        var ferrari = new Masina("rosu", 4);
+
+        console.log(ferrari.sumar());
+
+    </script>
+</body>
+</html>
