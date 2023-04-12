@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      //da 2 proprietati cu numele coloare, nrRoti
+        const masina = {
+          culoare:"verde",
+          nrRoti:4,
+        };
+        console.log(masina);
+
+        masina.culoare= "rosu";
+        masina.nrRoti= 2;
+        console.log(masina);
+
+        //copiaza intr-un obiect nou numit masinaSmechera si afiseaza-l
+        const masinaSmechera = Object.assign({}, masina);
+        console.log(masinaSmechera);
+        masinaSmechera.culoare= "alb";
+        masinaSmechera.nrRoti= 3;
+        console.log(masinaSmechera);
+
+    </script>
+</body>
+</html>

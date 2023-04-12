@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const user = {
+          fname: 'Gregorian',
+          lname: 'Bivolaru',
+        }
+
+        const copy2 = Object.assign(
+            {}, user);
+
+        const copy1 = Object.assign({}, user);
+        console.log(user.lname + " L " +user.fname);
+        console.log(user)
+        copy1.fname = 'Ionel';
+        console.log(copy1);
+        copy2.lname ="Adamescu";
+        console.log(copy2);
+        const user123 = {
+          fname: '',
+          lname: '',
+        };
+        Object.assign(user123, user);
+        console.log(user123);
+
+        const user12345 = {};
+        Object.assign(user12345, user);
+        console.log(user12345);
+    </script>
+</body>
+</html>
