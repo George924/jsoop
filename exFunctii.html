@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = 6;
+        var b = 4;
+        var f = function() {
+         if (a>b){
+            
+        console.log('a >b');
+            
+         } else {
+            console.log('b>=a');
+         }
+        }
+        f.call();
+        console.log('a are valorea lui a, b are valoarea lui b');
+        console.log(`a are valoarea = ${a} b are valoarea = ${b}`);
+        // Ghlimilele simple indica exact textul scris, dar nu valoarea lui a sau b.
+        // Pe cand ghilimelele diagonale indica exact valoarea care corespunde lui a sau b.
+        // apelarea unei functii anonime se face intotdeauna prin metoda call a variabilei unde e'ste tinuta functia.
+
+        a=10;
+        b=20;
+        f.call();
+
+
+
+    </script>
+</body>
+
+</html>
