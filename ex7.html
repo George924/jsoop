@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Vehicle {
+            #_type;
+            #_color;
+            #_model;
+            #_year;
+
+            constructor(type, color, model, year) {
+                this.#_type = type;
+                this.#_color = color;
+                this.#_model = model;
+                this.#_year = year;
+            }
+            get type() {
+                console.log('sunt in getter type')
+                return this.#_type;
+            }
+            set type(value) {
+                console.log('sunt in setter type')
+                this.#_type = value;
+            }
+            get color() {
+                return this.#_color;
+            }
+            set color(value) {
+                this.#_color = value;
+
+            }
+
+            get model() {
+                return this.#_model;
+            }
+            set model(value) {
+                this.#_model = value;
+            }
+
+            get year() {
+                return this.#_year;
+            }
+            set year(value) {
+                this.#_year = value;
+            }
+
+
+            start() {
+                return 'Vehicle started';
+            }
+            stop() {
+                return 'Vehicle stopped';
+            }
+            pickupPassangers() {
+                return 'Passagers picked up';
+            }
+            dropOffPassangers() {
+                return 'Passangers dropped off';
+            }
+            info() {
+                return `Vehicle info ${this.type} ${this.color} ${this.model} ${this.year}`;
+            }
+        };
+
+        const vehicle1 = new Vehicle('car', 'red', 'Ford', 2015);
+        const vehicle2 = new Vehicle('motorbike', 'blue', 'Honda', 2018);
+        vehicle1.type;
+        vehicle1.type = 'Bicicleta';
+        console.log(vehicle1.info());
+        console.log(vehicle1.stop());
+        console.log(vehicle1.pickupPassangers());
+        console.log(vehicle1.dropOffPassangers());
+    </script>
+</body>
+
+</html>
