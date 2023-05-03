@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Date de intrare:
+      let date1 = "12/15/2023";
+      let date2 = "12/13/2023";
+      //Date de iesire:
+
+      const DAY_IN_MILLISECONDS = 1000 * 60 * 60 * 24;
+
+      function getDayBetweenDates(
+        dateText1,
+        dateText2,
+        dateText3,
+        dateText4,
+        dateText5
+      ) {
+        const date1 = new Date(dateText1);
+        const date2 = new Date(dateText2);
+        let diffTime = Math.abs(date2 - date1);
+        let diffDays = Math.ceil(diffTime / DAY_IN_MILLISECONDS);
+
+        let differences = [];
+
+        differences[0] = diffDays; //dateText2 - dateText1;
+
+        const date3 = new Date(dateText3);
+        diffTime = Math.abs(date3 - date2);
+        diffDays = Math.ceil(diffTime / DAY_IN_MILLISECONDS);
+        differences[1] = diffDays; //dateText3 - dateText2;
+
+        const date4 = new Date(dateText4);
+        diffTime = Math.abs(date4 - date3);
+        diffDays = Math.ceil(diffTime / DAY_IN_MILLISECONDS);
+        differences[2] = diffDays; //dateText4 - dateText3;
+
+        const date5 = new Date(dateText5);
+        diffTime = Math.abs(date5 - date4);
+        diffDays = Math.ceil(diffTime / DAY_IN_MILLISECONDS);
+
+        differences[3] = diffDays; //dateText5 - dateText4;
+        return differences;
+      }
+        console.log(getDayBetweenDates('11/15/2023', '11/18/2023', '11/29/2023', '12/08/2023', '12/26/2023'));
+
+      function getAge(dateString) {
+        var today = new Date();
+        var birthDate = new Date(dateString);
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var m = today.getMonth() - brithDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate)) {
+        }
+      }
+    </script>
+  </body>
+</html>

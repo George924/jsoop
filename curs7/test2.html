@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      //Date de intrare
+
+      function palindrom (str){
+        console.log(str.length);
+        let reversedString = "";
+        for( let i = str.length - 1; i >= 0; i--){
+          reversedString = reversedString + str.charAt(i);
+        }
+
+        console.log(reversedString);
+        return str === reversedString;
+      }
+
+      console.log(palindrom("capac"));
+    
+      console.log(palindrom("agdsasdfasdgbasdfgasdfasdffasadggasddfgsdfgdsfiogjsdlfjglsdfgkjsdkfg"));
+
+      function palindrom2(str) {
+            let reverseString = str.split("").reverse().join("");
+            return str === reverseString
+            
+        }
+
+console.log(palindrom2("capac"));
+
+console.log(palindrom2("agdsasdfasdgbasdfgasdfasdffasadggasddfgsdfgdsfiogjsdlfjglsdfgkjsdkfg"));
+    </script>
+</body>
+</html>
