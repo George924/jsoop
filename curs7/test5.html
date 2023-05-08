@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Date de intrare:
+      var arr1 = [6, 8, 5, 1, 10, 4, 2, 3, 5, 9, 6, 2, 7, 1];
+      //Date de iesire:
+      //[1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      console.log(arr1);
+
+      function removeDuplicates (arr) {
+            if (arr.length <= 1) return arr;
+            let currentIndex = 0;
+            arr = arr.sort();
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[currentIndex] !== arr[i]) {
+                    currentIndex++;
+                    arr[currentIndex] = arr[i];
+                }
+            }
+            arr.length = currentIndex + 1;
+            return arr;
+      }
+
+      removeDuplicates(arr1);
+      console.log(arr1);
+
+    </script>
+  </body>
+</html>

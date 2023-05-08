@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      // 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 
+      // 
+
+      function fibonacciValue(no) {
+        if(no < 2){
+          return 1;
+        }
+
+        var prev = 0;
+        var current = 1;
+        for( let i = 2; i <=no; i++ ){
+
+          console.log(`${prev} ${current}`);
+          let aux = prev;
+          prev = current;
+          current = current + aux;
+
+        }
+        return current;
+      }
+
+      console.log(fibonacciValue(9));
+
+    </script>
+  </body>
+</html>
