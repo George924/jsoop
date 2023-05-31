@@ -1,0 +1,25 @@
+<h3 class="p-3 text-center">Angular - Display a list of clothes</h3>
+<div class="container">
+  <ul class="code-editor-options-menu" *ngFor="let cloth of clothes">
+    <li>
+      <span [ngClass]="cloth.name == 'Pantaloni' ? 'colorRed' : 'colorBlue'"
+        >{{ cloth.name }} - {{ cloth.color }} - {{ cloth.size }}</span
+      >
+      <br />
+      <button
+        (click)="cloth.showImage = !cloth.showImage"
+        style="width: 80px; height: 20px">
+        <a>{{ cloth.showImage ? "hide" : "show" }}</a>
+      </button>
+      <br />
+      <img
+        [hidden]="!cloth.showImage"
+        src="{{ cloth.imgSrc }}"
+        alt=""
+        width="200"
+        height="200"
+      />
+    </li>
+  </ul>
+</div>
+<router-outlet></router-outlet>
